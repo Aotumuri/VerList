@@ -1,0 +1,94 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* コンテナ */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 見出し */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* セクション */
+.section {
+    margin-bottom: 20px;
+}
+
+/* ラベル */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* インプット */
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 行ごとの配置 */
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ボタン */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #ddd;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #bbb;
+}
+
+.btn.primary {
+    background: #007BFF;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #0056b3;
+}
+
+/* 出力表示 */
+pre {
+    background: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 150px;
+    overflow-y: auto;
+    font-size: 14px;
+}

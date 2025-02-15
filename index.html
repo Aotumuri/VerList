@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sotf Patchnote Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patchnote Generator</h1>
+        <p>使用した場合はAotumuriが作ったアプリで制作したことがわかるようにしてください。</p>
+        <p>想定しよう方法は大雑把に叩き込んで、パッチ公開時にちょっといじるかたちです。</p>
+        <p>途中で要素を消そうと思ったらtxtで消してロードしてください。その際()の数字を一減らさないとバグります</p>
+
+        <div class="section">
+            <label for="version">バージョン:</label>
+            <input type="text" id="version" placeholder="例: 1.2.3">
+        </div>
+
+        <div class="section">
+            <h2>項目を追加</h2>
+            <div class="row">
+                <select id="category">
+                    <option>アイテム</option>
+                    <option>ブロック</option>
+                    <option>モブ</option>
+                    <option>状態</option>
+                    <option>実績</option>
+                    <option>ゲーム性</option>
+                    <option>その他</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>種類:</label>
+                <input type="radio" name="type" value="add" checked> 追加(~を追加しましたを自動生成)
+                <input type="radio" name="type" value="change"> 変更
+                <input type="radio" name="type" value="fix"> 修正
+            </div>
+
+            <div class="row">
+                <input type="text" id="content" placeholder="項目を入力">
+                <button class="btn" onclick="addItem()">追加</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>生成されたパッチノート</h2>
+            <pre id="output"></pre>
+        </div>
+
+        <div class="buttons">
+            <button class="btn primary" onclick="generatePatchnote()">生成</button>
+            <button class="btn" onclick="copyToClipboard()">コピー</button>
+            <button class="btn" onclick="saveToFile()">保存</button>
+            <button class="btn" onclick="loadFromFile()">ロード</button>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

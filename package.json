@@ -1,0 +1,30 @@
+{
+  "name": "verapp",
+  "version": "1.0.0",
+  "description": "バージョンを記入してくれるだけのapp",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "sotf-patchnote",
+    "productName": "Sotf Patchnote Generator",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": "zip",
+      "icon": "icon.icns"
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8",
+    "nsis": "^0.0.0"
+  }
+}
